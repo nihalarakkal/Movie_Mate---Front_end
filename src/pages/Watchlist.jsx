@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+
+
 import axios from 'axios';
 
 const Watchlist = () => {
@@ -7,7 +9,7 @@ const Watchlist = () => {
   useEffect(() => {
     axios.get('http://127.0.0.1:8000/api/movies/?status=wishlist')
       .then(res => {
-        // ✅ Filter duplicates based on title
+      
         const seenTitles = new Set();
         const unique = res.data.filter(movie => {
           if (!seenTitles.has(movie.title)) {

@@ -7,7 +7,6 @@ const Home = () => {
   useEffect(() => {
     axios.get('http://127.0.0.1:8000/api/movies/')
       .then(res => {
-        // ✅ Filter duplicates based on title
         const seenTitles = new Set();
         const uniqueMovies = res.data.filter(movie => {
           if (!seenTitles.has(movie.title)) {

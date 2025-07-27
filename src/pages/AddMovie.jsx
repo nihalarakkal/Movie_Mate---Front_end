@@ -10,6 +10,7 @@ const AddMovie = () => {
     status: 'wishlist',
     total_episodes: '',
     episodes_watched: '',
+    avg_episode_duration: '', 
     review: '',
     rating: '',
   });
@@ -37,6 +38,7 @@ const AddMovie = () => {
           status: 'wishlist',
           total_episodes: '',
           episodes_watched: '',
+          avg_episode_duration: '', 
           review: '',
           rating: '',
         });
@@ -82,22 +84,27 @@ const AddMovie = () => {
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Total Episodes (optional)</label>
+          <label className="form-label">Total Episodes</label>
           <input type="number" name="total_episodes" className="form-control" value={formData.total_episodes} onChange={handleChange} />
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Episodes Watched (optional)</label>
+          <label className="form-label">Episodes Watched</label>
           <input type="number" name="episodes_watched" className="form-control" value={formData.episodes_watched} onChange={handleChange} />
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Review (optional)</label>
+          <label className="form-label">Avg. Episode Duration (in minutes)</label>
+          <input type="number" name="avg_episode_duration" className="form-control" value={formData.avg_episode_duration} onChange={handleChange} />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">Review</label>
           <textarea name="review" className="form-control" value={formData.review} onChange={handleChange}></textarea>
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Rating (optional)</label>
+          <label className="form-label">Rating</label>
           <input type="number" name="rating" className="form-control" value={formData.rating} onChange={handleChange} min="1" max="10" />
         </div>
 

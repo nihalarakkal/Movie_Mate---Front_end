@@ -7,7 +7,14 @@ import Watchlist from './pages/Watchlist';
 import Completed from './pages/Completed';
 import NotFound from './pages/NotFound';
 import Recommendations from './pages/Recommendations';
-import { UserProvider } from './UserContext'; 
+import { UserProvider } from './UserContext';
+import Dashboard from './pages/Dashboard';
+
+
+const RecommendationsWrapper = () => {
+  const { userId } = useParams();
+  return <Recommendations userId={userId} />;
+};
 
 function App() {
   return (
@@ -20,12 +27,14 @@ function App() {
             <Route path="/add" element={<AddMovie />} />
             <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/completed" element={<Completed />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/recommendations" element={<Recommendations />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </Router>
-    </UserProvider> 
+    </UserProvider>
   );
 }
 
