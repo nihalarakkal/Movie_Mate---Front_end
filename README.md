@@ -1,12 +1,27 @@
-# React + Vite
+🎬**** **MovieMate (Frontend)*****
+This is the frontend for MovieMate built using ReactJS and Bootstrap. It interacts with the backend API to manage your personal movie & TV show collection.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✅ **Features**
+UI to add/edit/delete movies/TV shows
 
-Currently, two official plugins are available:
+Track watch status and episode progress
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Filter by genre, platform, or status
 
-## Expanding the ESLint configuration
+Show ratings and reviews
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Connects to Django REST API
+
+Responsive design using Bootstrap
+
+**⚙️ Setup Instructions**
+Clone the repo
+git clone https://github.com/your-username/moviemate-frontend.git
+cd moviemate-frontend
+
+**Install dependencies**
+npm install
+
+**Start development server**
+npm start
+Runs on: http://localhost:3000
